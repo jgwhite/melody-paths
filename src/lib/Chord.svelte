@@ -1,38 +1,46 @@
-<script type="ts">
-	import { split } from './note';
+<script lang="ts">
+	import { notesForKey, notesForChord } from './note';
+	import ChordName from './ChordName.svelte';
 
+	export let key = 'Do';
 	export let chord = {
 		root: 'Do',
 		quality: '',
 		extensions: ''
 	};
 
-	let { base, accidental } = split(chord.root);
+	let keyNotes = notesForKey(key).reverse();
+	let chordNotes = notesForChord(chord);
 </script>
 
 <div class="chord">
-	<span class="a">{base}</span>
-	<span class="b">{accidental}</span>
-	<span class="c">{chord.quality}{chord.extensions}</span>
+	{#each keyNotes as note, index}
+		<div class="note" class:active={chordNotes.includes(note)}>
+			{7 - index}
+		</div>
+	{/each}
+	<ChordName {chord} />
 </div>
 
 <style>
 	.chord {
-		display: grid;
-		grid-template:
-			'a b' 1rem
-			'a c' 1rem;
+		display: flex;
+		gap: 0.5rem;
+		flex-direction: column;
+		justify-content: middle;
 		align-items: center;
-		justify-content: start;
 	}
-	.a {
-		grid-area: a;
-		font-size: 1.5rem;
+	.note {
+		display: flex;
+		padding: 1rem;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		border: 1px solid transparent;
+		width: 1rem;
+		height: 1rem;
 	}
-	.b {
-		grid-area: b;
-	}
-	.c {
-		grid-area: c;
+	.note.active {
+		border-color: black;
 	}
 </style>
