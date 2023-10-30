@@ -43,12 +43,6 @@
 		justify-content: middle;
 		align-items: center;
 	}
-	.chord {
-		display: flex;
-		min-height: 1.5rem;
-		align-items: center;
-		justify-content: center;
-	}
 	.note {
 		display: flex;
 		padding: 1rem;

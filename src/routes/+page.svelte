@@ -3,6 +3,3 @@
 </script>
 
 <MelodyPath />
-
-<style>
-</style>
