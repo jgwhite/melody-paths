@@ -1,0 +1,38 @@
+<script type="ts">
+	import { split } from './note';
+
+	export let chord = {
+		root: 'Do',
+		quality: '',
+		extensions: ''
+	};
+
+	let { base, accidental } = split(chord.root);
+</script>
+
+<div class="chord">
+	<span class="a">{base}</span>
+	<span class="b">{accidental}</span>
+	<span class="c">{chord.quality}{chord.extensions}</span>
+</div>
+
+<style>
+	.chord {
+		display: grid;
+		grid-template:
+			'a b' 1rem
+			'a c' 1rem;
+		align-items: center;
+		justify-content: start;
+	}
+	.a {
+		grid-area: a;
+		font-size: 1.5rem;
+	}
+	.b {
+		grid-area: b;
+	}
+	.c {
+		grid-area: c;
+	}
+</style>
