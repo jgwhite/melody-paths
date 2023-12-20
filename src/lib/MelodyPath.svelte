@@ -1,22 +1,87 @@
 <script type="ts">
 	import Chord from './Chord.svelte';
 
-	let key = 'Sol-';
+	let key = 'Re';
 	let chords = [
 		{
-			root: 'Sol',
+			root: 'Mi',
 			quality: '-',
+			extensions: '7'
+		},
+		{
+			root: 'La',
+			quality: '',
+			extensions: '7'
+		},
+		{
+			root: 'Mi',
+			quality: '-',
+			extensions: '7'
+		},
+		{
+			root: 'La',
+			quality: '',
+			extensions: '7'
+		},
+		{
+			root: 'Fa♯',
+			quality: '-',
+			extensions: '7'
+		},
+		{
+			root: 'Si',
+			quality: '',
+			extensions: '7'
+		},
+		{
+			root: 'Fa♯',
+			quality: '-',
+			extensions: '7'
+		},
+		{
+			root: 'Si',
+			quality: '',
+			extensions: '7'
+		},
+		{
+			root: 'Si',
+			quality: '-',
+			extensions: '7'
+		},
+		{
+			root: 'Mi',
+			quality: '',
+			extensions: '7'
+		},
+		{
+			root: 'Si♭',
+			quality: '',
 			extensions: '7'
 		},
 		{
 			root: 'Mi♭',
 			quality: '',
-			extensions: '9'
+			extensions: '7'
 		},
 		{
 			root: 'Re',
 			quality: '',
-			extensions: '7♭9'
+			extensions: 'Δ'
+		},
+		{
+			root: 'Mi',
+			quality: '-',
+			extensions: '7'
+		},
+		{
+			root: 'Fa♯',
+			quality: '-',
+			extensions: '7'
+		},
+		{
+			root: 'Si',
+			quality: '',
+			extensions: '7'
 		}
 	];
 </script>
