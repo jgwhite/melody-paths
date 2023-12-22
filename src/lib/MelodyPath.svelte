@@ -1,16 +1,25 @@
-<script type="ts">
+<script lang="ts">
+	import { goto } from '$app/navigation';
 	import Chord from './Chord.svelte';
 	import Column from './Column.svelte';
 	import Dot from './Dot.svelte';
 	import { notesForKey } from './note';
 	import songs from './songs';
 
-	let song = songs[0];
+	export let song = songs[0];
+
+	function handleSongChange(event: Event) {
+		let target = event.target;
+
+		if (target instanceof HTMLSelectElement) {
+			goto(`/${target.value}`);
+		}
+	}
 </script>
 
-<select bind:value={song}>
-	{#each songs as song (song)}
-		<option value={song}>{song.name}</option>
+<select on:change={handleSongChange}>
+	{#each songs as s (s.id)}
+		<option selected={s === song} value={s.id}>{s.name}</option>
 	{/each}
 </select>
 
