@@ -15,23 +15,7 @@
 	let chordNotes = notesForChord(chord);
 
 	function isActive(note: string, n: number): boolean {
-		if (chordNotes.includes(note)) {
-			return true;
-		}
-
-		if (n === 3) {
-			return false;
-		}
-
-		if (n === 7) {
-			return false;
-		}
-
-		if (chordNotes.includes(transpose(note, 1))) {
-			return true;
-		}
-
-		return false;
+		return chordNotes.includes(note) || chordNotes.includes(outsideNote(note, n));
 	}
 
 	function numberFor(note: string, n: number): string {
@@ -39,25 +23,65 @@
 			return `${n}`;
 		}
 
-		if (n === 3) {
-			return `${n}`;
-		}
+		note = outsideNote(note, n);
 
-		if (n === 7) {
-			return `${n}`;
-		}
-
-		if (chordNotes.includes(transpose(note, 1))) {
+		if (chordNotes.includes(note)) {
 			return `♯${n}`;
 		}
 
 		return `${n}`;
 	}
+
+	function titleFor(note: string, n: number) {
+		if (chordNotes.includes(note)) {
+			return note;
+		}
+
+		note = outsideNote(note, 1);
+
+		if (chordNotes.includes(note)) {
+			return note;
+		}
+
+		return note;
+	}
+
+	function outsideNote(note: string, n: number): string {
+		if (n === 3) {
+			return note;
+		}
+		if (n === 7) {
+			return note;
+		}
+		return transpose(note, 1);
+	}
+
+	function colorFor(note: string, n: number): string | undefined {
+		if (note === chordNotes[0] || outsideNote(note, n) == chordNotes[0]) {
+			return '#f59e0b';
+		}
+
+		if (note === chordNotes[1] || outsideNote(note, n) === chordNotes[1]) {
+			return '#fbbf24';
+		}
+
+		if (note === chordNotes[2] || outsideNote(note, n) === chordNotes[2]) {
+			return '#fde68a';
+		}
+
+		if (note === chordNotes[3] || outsideNote(note, n) === chordNotes[3]) {
+			return '#fffbeb';
+		}
+	}
 </script>
 
 <Column>
 	{#each keyNotes as note, index}
-		<Dot isActive={isActive(note, 7 - index)}>
+		<Dot
+			isActive={isActive(note, 7 - index)}
+			title={titleFor(note, 7 - index)}
+			color={colorFor(note, 7 - index)}
+		>
 			{numberFor(note, 7 - index)}
 		</Dot>
 	{/each}

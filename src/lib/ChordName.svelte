@@ -19,7 +19,6 @@
 <style>
 	.chord-name {
 		display: grid;
-		font-weight: 500;
 		grid-template:
 			'a b' 1rem
 			'a c' 1rem;

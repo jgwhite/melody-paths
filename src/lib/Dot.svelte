@@ -1,8 +1,10 @@
 <script lang="ts">
 	export let isActive = false;
+	export let title = '';
+	export let color: string | undefined;
 </script>
 
-<div class="dot" class:active={isActive}>
+<div class="dot" class:active={isActive} style:background-color={color} {title}>
 	<slot />
 </div>
 
