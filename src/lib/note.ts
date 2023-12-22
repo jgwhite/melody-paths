@@ -60,8 +60,6 @@ export function notesForChord(chord: Chord): string[] {
 		result.push(keyNotes[6]);
 	}
 
-	console.log(chord.root + chord.extensions + chord.quality, result);
-
 	return result;
 }
 

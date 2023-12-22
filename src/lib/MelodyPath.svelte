@@ -21,7 +21,7 @@
 		{/each}
 	</Column>
 
-	{#each song.chords as chord}
+	{#each song.chords as chord (chord)}
 		<Chord key={song.key} {chord} />
 	{/each}
 </div>
