@@ -31,8 +31,6 @@ export function notesForChord(chord: Chord): string[] {
 	const result: string[] = [];
 	const keyNotes = notesForKey(chord.root);
 
-	console.log(chord.root, keyNotes);
-
 	// 1st
 	result.push(keyNotes[0]);
 
