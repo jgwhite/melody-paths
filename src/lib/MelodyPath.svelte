@@ -9,7 +9,7 @@
 </script>
 
 <select bind:value={song}>
-	{#each songs as song}
+	{#each songs as song (song)}
 		<option value={song}>{song.name}</option>
 	{/each}
 </select>
