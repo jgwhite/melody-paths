@@ -1,5 +1,8 @@
 <script type="ts">
 	import Chord from './Chord.svelte';
+	import Column from './Column.svelte';
+	import Dot from './Dot.svelte';
+	import { notesForKey } from './note';
 
 	let key = 'Re';
 	let chords = [
@@ -87,6 +90,12 @@
 </script>
 
 <div class="progression">
+	<Column>
+		{#each notesForKey(key).reverse() as note}
+			<Dot>{note}</Dot>
+		{/each}
+	</Column>
+
 	{#each chords as chord}
 		<Chord {key} {chord} />
 	{/each}
@@ -95,6 +104,5 @@
 <style>
 	.progression {
 		display: flex;
-		gap: 0.5rem;
 	}
 </style>
