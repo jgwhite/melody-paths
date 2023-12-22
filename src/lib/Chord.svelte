@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { notesForKey, notesForChord } from './note';
+	import { notesForKey, notesForChord, transpose } from './note';
 	import ChordName from './ChordName.svelte';
 	import Column from './Column.svelte';
 	import Dot from './Dot.svelte';
@@ -13,12 +13,52 @@
 
 	let keyNotes = notesForKey(key).reverse();
 	let chordNotes = notesForChord(chord);
+
+	function isActive(note: string, n: number): boolean {
+		if (chordNotes.includes(note)) {
+			return true;
+		}
+
+		if (n === 3) {
+			return false;
+		}
+
+		if (n === 7) {
+			return false;
+		}
+
+		if (chordNotes.includes(transpose(note, 1))) {
+			return true;
+		}
+
+		return false;
+	}
+
+	function numberFor(note: string, n: number): string {
+		if (chordNotes.includes(note)) {
+			return `${n}`;
+		}
+
+		if (n === 3) {
+			return `${n}`;
+		}
+
+		if (n === 7) {
+			return `${n}`;
+		}
+
+		if (chordNotes.includes(transpose(note, 1))) {
+			return `♯${n}`;
+		}
+
+		return `${n}`;
+	}
 </script>
 
 <Column>
 	{#each keyNotes as note, index}
-		<Dot isActive={chordNotes.includes(note)}>
-			{7 - index}
+		<Dot isActive={isActive(note, 7 - index)}>
+			{numberFor(note, 7 - index)}
 		</Dot>
 	{/each}
 	<div class="box">
