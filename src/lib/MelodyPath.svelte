@@ -3,105 +3,33 @@
 	import Column from './Column.svelte';
 	import Dot from './Dot.svelte';
 	import { notesForKey } from './note';
+	import songs from './songs';
 
-	let key = 'Re';
-	let chords = [
-		{
-			root: 'Mi',
-			quality: '-',
-			extensions: '7'
-		},
-		{
-			root: 'La',
-			quality: '',
-			extensions: '7'
-		},
-		{
-			root: 'Mi',
-			quality: '-',
-			extensions: '7'
-		},
-		{
-			root: 'La',
-			quality: '',
-			extensions: '7'
-		},
-		{
-			root: 'Fa♯',
-			quality: '-',
-			extensions: '7'
-		},
-		{
-			root: 'Si',
-			quality: '',
-			extensions: '7'
-		},
-		{
-			root: 'Fa♯',
-			quality: '-',
-			extensions: '7'
-		},
-		{
-			root: 'Si',
-			quality: '',
-			extensions: '7'
-		},
-		{
-			root: 'Si',
-			quality: '-',
-			extensions: '7'
-		},
-		{
-			root: 'Mi',
-			quality: '',
-			extensions: '7'
-		},
-		{
-			root: 'Si♭',
-			quality: '',
-			extensions: '7'
-		},
-		{
-			root: 'Mi♭',
-			quality: '',
-			extensions: '7'
-		},
-		{
-			root: 'Re',
-			quality: '',
-			extensions: 'Δ'
-		},
-		{
-			root: 'Mi',
-			quality: '-',
-			extensions: '7'
-		},
-		{
-			root: 'Fa♯',
-			quality: '-',
-			extensions: '7'
-		},
-		{
-			root: 'Si',
-			quality: '',
-			extensions: '7'
-		}
-	];
+	let song = songs[0];
 </script>
+
+<select bind:value={song}>
+	{#each songs as song}
+		<option value={song}>{song.name}</option>
+	{/each}
+</select>
 
 <div class="progression">
 	<Column>
-		{#each notesForKey(key).reverse() as note}
+		{#each notesForKey(song.key).reverse() as note}
 			<Dot>{note}</Dot>
 		{/each}
 	</Column>
 
-	{#each chords as chord}
-		<Chord {key} {chord} />
+	{#each song.chords as chord}
+		<Chord key={song.key} {chord} />
 	{/each}
 </div>
 
 <style>
+	select {
+		margin-bottom: 1rem;
+	}
 	.progression {
 		display: flex;
 	}

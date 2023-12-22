@@ -11,5 +11,6 @@
 		align-items: center;
 		padding: 0 0.5rem;
 		border-right: 1px solid #eee;
+		min-width: 5rem;
 	}
 </style>

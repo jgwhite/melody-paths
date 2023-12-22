@@ -42,10 +42,15 @@ export function notesForChord(chord: Chord): string[] {
 		result.push(keyNotes[2]);
 	}
 
-	// 5th
-	result.push(keyNotes[4]);
+	if (chord.extensions.includes('♭5')) {
+		// Flat 5th
+		result.push(transpose(keyNotes[4], -1));
+	} else {
+		// Perfect 5th
+		result.push(keyNotes[4]);
+	}
 
-	if (chord.extensions === '7') {
+	if (chord.extensions.includes('7')) {
 		// Minor 7th
 		result.push(transpose(keyNotes[6], -1));
 	}
@@ -55,6 +60,8 @@ export function notesForChord(chord: Chord): string[] {
 		result.push(keyNotes[6]);
 	}
 
+	console.log(chord.root + chord.extensions + chord.quality, result);
+
 	return result;
 }
 
@@ -62,7 +69,7 @@ export function transpose(note: string, semitones: number): string {
 	const i = notes.indexOf(normalize(note));
 	const j = (i + semitones) % 12;
 
-	return notes[j];
+	return notes.at(j)!;
 }
 
 export function normalize(note: string): string {
