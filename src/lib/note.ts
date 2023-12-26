@@ -34,6 +34,15 @@ export function notesForChord(chord: Chord): string[] {
 	// 1st
 	result.push(keyNotes[0]);
 
+	if (chord.quality === 'o' && chord.extensions === '7') {
+		// Special treatment for diminished seventh (o7)
+		result.push(transpose(keyNotes[2], -1));
+		result.push(transpose(keyNotes[4], -1));
+		result.push(transpose(keyNotes[6], -2));
+
+		return result;
+	}
+
 	if (chord.quality === '-') {
 		// Minor 3rd
 		result.push(transpose(keyNotes[2], -1));
