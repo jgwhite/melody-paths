@@ -72,6 +72,10 @@
 		if (note === chordNotes[3] || outsideNote(note, n) === chordNotes[3]) {
 			return '#fffbeb';
 		}
+
+		if (note === chordNotes[4] || outsideNote(note, n) === chordNotes[4]) {
+			return '#ede9fe';
+		}
 	}
 </script>
 

@@ -60,6 +60,10 @@ export function notesForChord(chord: Chord): string[] {
 		result.push(keyNotes[6]);
 	}
 
+	if (chord.extensions.includes('♭9')) {
+		result.push(transpose(keyNotes[1], -1));
+	}
+
 	return result;
 }
 
