@@ -82,6 +82,10 @@ export function notesForChord(chord: Chord): string[] {
 		result.push(keyNotes[1]);
 	}
 
+	if (chord.extensions.includes('♯11')) {
+		result.push(transpose(keyNotes[3], 1));
+	}
+
 	return result;
 }
 
