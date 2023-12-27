@@ -59,6 +59,11 @@ export function notesForChord(chord: Chord): string[] {
 		result.push(keyNotes[4]);
 	}
 
+	if (chord.extensions.includes('6')) {
+		// 6th
+		result.push(keyNotes[5]);
+	}
+
 	if (chord.extensions.includes('7')) {
 		// Minor 7th
 		result.push(transpose(keyNotes[6], -1));
@@ -70,7 +75,11 @@ export function notesForChord(chord: Chord): string[] {
 	}
 
 	if (chord.extensions.includes('♭9')) {
+		// Flat 9th
 		result.push(transpose(keyNotes[1], -1));
+	} else if (chord.extensions.includes('9')) {
+		// Regular 9th
+		result.push(keyNotes[1]);
 	}
 
 	return result;
