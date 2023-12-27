@@ -155,7 +155,23 @@ const youDontKnow = {
 		{ root: 'La', quality: '', extensions: '7' }, //
 		{ root: 'Re', quality: '', extensions: 'Δ' }, // 22
 		{ root: 'Mi♭', quality: '', extensions: '9(♯11)' }, // 23
-		{ root: 'Re', quality: '', extensions: '7♭9' } // 24
+		{ root: 'Re', quality: '', extensions: '7♭9' }, // 24
+
+		{ root: 'Sol', quality: '-', extensions: '7' }, // 25
+		{ root: 'Mi♭', quality: '', extensions: '9' }, // 26
+		{ root: 'Re', quality: '', extensions: '7♭9' }, //
+		{ root: 'Sol', quality: '-', extensions: '6' }, // 27
+		{ root: 'La', quality: '-', extensions: '7' }, //
+		{ root: 'Re', quality: '', extensions: '7♭9' }, //
+		{ root: 'Mi♭', quality: '', extensions: '7' }, // 28
+		{ root: 'Do', quality: '', extensions: '7' }, // 29
+		{ root: 'La', quality: '-', extensions: '7♭5' }, //
+		{ root: 'Re', quality: '', extensions: '7♭9' }, //
+		{ root: 'Sol', quality: '-', extensions: '7' }, // 30
+		{ root: 'Si♭', quality: '', extensions: '7' }, //
+		{ root: 'Mi♭', quality: '', extensions: '7' }, // 31
+		{ root: 'Re', quality: '', extensions: '7♭9' }, //
+		{ root: 'Sol', quality: '-', extensions: '6' } // 32
 	]
 };
 
