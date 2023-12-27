@@ -6,6 +6,7 @@
 
 	export let key = 'Do';
 	export let chord = {
+		bar: undefined,
 		root: 'Do',
 		quality: '',
 		extensions: ''
@@ -92,6 +93,9 @@
 	<div class="box">
 		<ChordName {chord} />
 	</div>
+	{#if chord.bar}
+		<div class="bar">{chord.bar}</div>
+	{/if}
 </Column>
 
 <style>
@@ -99,5 +103,10 @@
 		border-top: 1px solid #eee;
 		margin-top: 0.5rem;
 		padding: 0.5rem 0;
+	}
+	.bar {
+		color: #222;
+		align-self: start;
+		font-size: 0.75rem;
 	}
 </style>
