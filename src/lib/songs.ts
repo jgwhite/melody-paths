@@ -107,4 +107,27 @@ export const satinDoll = {
 	]
 };
 
-export default [autumnLeaves, blackOrpheus, satinDoll];
+const youDontKnow = {
+	id: 'you-dont-know-what-love-is',
+	name: 'You Don’t Know What Love Is',
+	key: 'Si♭',
+	chords: [
+		{ root: 'Sol', quality: '-', extensions: '7' }, // 1
+		{ root: 'Mi♭', quality: '', extensions: '9' }, // 2
+		{ root: 'Re', quality: '', extensions: '7♭9' }, //
+		{ root: 'Sol', quality: '-', extensions: '6' }, // 3
+		{ root: 'La', quality: '-', extensions: '7' }, //
+		{ root: 'Re', quality: '', extensions: '7♭9' }, //
+		{ root: 'Mi♭', quality: '', extensions: '7' }, // 4
+		{ root: 'Do', quality: '', extensions: '7' }, // 5
+		{ root: 'La', quality: '-', extensions: '7♭5' }, //
+		{ root: 'Re', quality: '', extensions: '7♭9' }, //
+		{ root: 'Sol', quality: '-', extensions: '7' }, // 6
+		{ root: 'Si♭', quality: '', extensions: '7' }, //
+		{ root: 'Mi♭', quality: '', extensions: '7' }, // 7
+		{ root: 'La', quality: '-', extensions: '7♭5' }, // 8
+		{ root: 'Re', quality: '', extensions: '7♭9' } //
+	]
+};
+
+export default [autumnLeaves, blackOrpheus, satinDoll, youDontKnow];
