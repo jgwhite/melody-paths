@@ -126,7 +126,22 @@ const youDontKnow = {
 		{ root: 'Si♭', quality: '', extensions: '7' }, //
 		{ root: 'Mi♭', quality: '', extensions: '7' }, // 7
 		{ root: 'La', quality: '-', extensions: '7♭5' }, // 8
-		{ root: 'Re', quality: '', extensions: '7♭9' } //
+		{ root: 'Re', quality: '', extensions: '7♭9' }, //
+		{ root: 'Sol', quality: '-', extensions: '7' }, // 9
+		{ root: 'Mi♭', quality: '', extensions: '9' }, // 10
+		{ root: 'Re', quality: '', extensions: '7♭9' }, //
+		{ root: 'Sol', quality: '-', extensions: '6' }, // 11
+		{ root: 'La', quality: '-', extensions: '7' }, //
+		{ root: 'Re', quality: '', extensions: '7♭9' }, //
+		{ root: 'Mi♭', quality: '', extensions: '7' }, // 12
+		{ root: 'Do', quality: '', extensions: '7' }, // 13
+		{ root: 'La', quality: '-', extensions: '7♭5' }, //
+		{ root: 'Re', quality: '', extensions: '7♭9' }, //
+		{ root: 'Sol', quality: '-', extensions: '7' }, // 14
+		{ root: 'Si♭', quality: '', extensions: '7' }, //
+		{ root: 'Mi♭', quality: '', extensions: '7' }, // 15
+		{ root: 'Re', quality: '', extensions: '7♭9' }, //
+		{ root: 'Sol', quality: '-', extensions: '6' } // 16
 	]
 };
 
