@@ -127,6 +127,7 @@ const youDontKnow = {
 		{ root: 'Mi♭', quality: '', extensions: '7' }, // 7
 		{ root: 'La', quality: '-', extensions: '7♭5' }, // 8
 		{ root: 'Re', quality: '', extensions: '7♭9' }, //
+
 		{ root: 'Sol', quality: '-', extensions: '7' }, // 9
 		{ root: 'Mi♭', quality: '', extensions: '9' }, // 10
 		{ root: 'Re', quality: '', extensions: '7♭9' }, //
@@ -141,7 +142,20 @@ const youDontKnow = {
 		{ root: 'Si♭', quality: '', extensions: '7' }, //
 		{ root: 'Mi♭', quality: '', extensions: '7' }, // 15
 		{ root: 'Re', quality: '', extensions: '7♭9' }, //
-		{ root: 'Sol', quality: '-', extensions: '6' } // 16
+		{ root: 'Sol', quality: '-', extensions: '6' }, // 16
+
+		{ root: 'Do', quality: '-', extensions: '7' }, // 17
+		{ root: 'Fa', quality: '', extensions: '7' }, //
+		{ root: 'Si♭', quality: '', extensions: 'Δ' }, // 18
+		{ root: 'Sol', quality: '', extensions: '7♭9' }, //
+		{ root: 'Do', quality: '-', extensions: '7' }, // 19
+		{ root: 'Fa', quality: '', extensions: '7' }, //
+		{ root: 'Si♭', quality: '', extensions: 'Δ' }, // 20
+		{ root: 'Mi', quality: '-', extensions: '7' }, // 21
+		{ root: 'La', quality: '', extensions: '7' }, //
+		{ root: 'Re', quality: '', extensions: 'Δ' }, // 22
+		{ root: 'Mi♭', quality: '', extensions: '9(♯11)' }, // 23
+		{ root: 'Re', quality: '', extensions: '7♭9' } // 24
 	]
 };
 
