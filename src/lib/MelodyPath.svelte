@@ -3,10 +3,12 @@
 	import Chord from './Chord.svelte';
 	import Column from './Column.svelte';
 	import Dot from './Dot.svelte';
-	import { notesForKey } from './note';
+	import { notesForKey, ensureOrder } from './note';
 	import songs from './songs';
 
 	export let song = songs[0];
+
+	$: notes = ensureOrder(notesForKey(song.key)).reverse();
 
 	function handleSongChange(event: Event) {
 		let target = event.target;
@@ -25,7 +27,7 @@
 
 <div class="progression">
 	<Column>
-		{#each notesForKey(song.key).reverse() as note}
+		{#each notes as note}
 			<Dot>{note}</Dot>
 		{/each}
 	</Column>

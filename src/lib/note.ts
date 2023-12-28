@@ -28,6 +28,26 @@ export function notesForKey(key: string): string[] {
 	];
 }
 
+export function ensureOrder(notes: string[]): string[] {
+	const copy = [...notes];
+
+	for (let i = 1; i < copy.length; i++) {
+		const prev = withoutAccidentals(copy.at(i - 1)!);
+		const curr = withoutAccidentals(copy.at(i)!);
+		const next = withoutAccidentals(copy.at((i + 1) % copy.length)!);
+
+		if (prev === curr || curr === next) {
+			copy[i] = enharmonic(copy[i]);
+		}
+	}
+
+	return copy;
+}
+
+function withoutAccidentals(note: string): string {
+	return note.replace(/[♭♯]/, '');
+}
+
 export function notesForChord(chord: Chord): string[] {
 	const result: string[] = [];
 	const keyNotes = notesForKey(chord.root);
@@ -113,6 +133,48 @@ export function normalize(note: string): string {
 			return 'Si♭';
 		case 'Si♯':
 			return 'Do';
+		default:
+			return note;
+	}
+}
+
+export function enharmonic(note: string): string {
+	switch (note) {
+		case 'Do♯':
+			return 'Re♭';
+		case 'Re♭':
+			return 'Do♯';
+
+		case 'Re♯':
+			return 'Mi♭';
+		case 'Mi♭':
+			return 'Re♯';
+
+		case 'Mi♯':
+			return 'Fa';
+		case 'Fa':
+			return 'Mi♯';
+
+		case 'Sol♭':
+			return 'Fa♯';
+		case 'Fa♯':
+			return 'Sol♭';
+
+		case 'Sol♯':
+			return 'La♭';
+		case 'La♭':
+			return 'Sol♯';
+
+		case 'La♯':
+			return 'Si♭';
+		case 'Si♭':
+			return 'La♯';
+
+		case 'Si♯':
+			return 'Do';
+		case 'Do':
+			return 'Si♯';
+
 		default:
 			return note;
 	}
