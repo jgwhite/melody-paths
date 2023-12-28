@@ -6,6 +6,7 @@ export function splitName(note: string) {
 }
 
 export type Chord = {
+	bar?: number;
 	root: string;
 	quality: string;
 	extensions: string;

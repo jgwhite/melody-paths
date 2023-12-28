@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { notesForKey, notesForChord, transpose } from './note';
+	import { type Chord, notesForKey, notesForChord, transpose } from './note';
 	import ChordName from './ChordName.svelte';
 	import Column from './Column.svelte';
 	import Dot from './Dot.svelte';
 
 	export let key = 'Do';
-	export let chord = {
+	export let chord: Chord = {
 		bar: undefined,
 		root: 'Do',
 		quality: '',
