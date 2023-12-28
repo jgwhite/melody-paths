@@ -3,52 +3,58 @@ export default {
 	name: 'Black Orpheus',
 	key: 'Re',
 	chords: [
-		{ root: 'Si', quality: '-', extensions: '' }, // 1
-		{ root: 'Do♯', quality: '-', extensions: '7♭5' }, // 2
-		{ root: 'Fa♯', quality: '-', extensions: '7♭9' }, //
-		{ root: 'Si', quality: '-', extensions: '' }, // 3
-		{ root: 'Do♯', quality: '-', extensions: '7♭5' }, // 4
-		{ root: 'Fa♯', quality: '-', extensions: '7♭9' }, //
-		{ root: 'Si', quality: '-', extensions: '' }, // 5
-		{ root: 'Mi', quality: '-', extensions: '7' }, // 6
-		{ root: 'La', quality: '', extensions: '7' }, //
-		{ root: 'Re', quality: '', extensions: 'Δ' }, // 7
-		{ root: 'Re♯', quality: 'o', extensions: '7' }, // 8
-		{ root: 'Mi', quality: '-', extensions: '7' }, // 9
-		{ root: 'La', quality: '', extensions: '7' }, // 10
-		{ root: 'Re', quality: '', extensions: '6' }, // 11
-		{ root: 'Sol', quality: '', extensions: 'Δ' }, // 12
-		{ root: 'Do♯', quality: '-', extensions: '7♭5' }, // 13
-		{ root: 'Fa♯', quality: '-', extensions: '7♭9' }, // 14
-		{ root: 'Si', quality: '-', extensions: '' }, // 15
-		{ root: 'Do♯', quality: '-', extensions: '7♭5' }, // 16
-		{ root: 'Fa♯', quality: '-', extensions: '7♭9' }, //
-		{ root: 'Si', quality: '-', extensions: '' }, // 17
-		{ root: 'Do♯', quality: '-', extensions: '7♭5' }, // 18
-		{ root: 'Fa♯', quality: '-', extensions: '7♭9' }, //
-		{ root: 'Si', quality: '-', extensions: '' }, // 19
-		{ root: 'Do♯', quality: '-', extensions: '7♭5' }, // 20
-		{ root: 'Fa♯', quality: '-', extensions: '7♭9' }, //
-		{ root: 'Fa♯', quality: '-', extensions: '7♭5' }, // 21
-		{ root: 'Si', quality: '', extensions: '7♭9' }, // 22
-		{ root: 'Mi', quality: '-', extensions: '' }, // 23
-		{ root: 'Mi', quality: '-', extensions: '' }, // 25
-		{ root: 'Do♯', quality: '-', extensions: '7♭5' }, // 26
-		{ root: 'Fa♯', quality: '', extensions: '7♭9' }, //
-		{ root: 'Si', quality: '-', extensions: '' }, // 27
-		{ root: 'Sol', quality: '', extensions: 'Δ' }, // 28
-		{ root: 'Do♯', quality: '-', extensions: '7♭5' }, // 26
-		{ root: 'Fa♯', quality: '', extensions: '7♭9' }, //
-		{ root: 'Si', quality: '-', extensions: '' }, // 27
-		{ root: 'Do♯', quality: '-', extensions: '7♭5' }, // 28
-		{ root: 'Fa♯', quality: '', extensions: '7♭9' }, //
-		{ root: 'Si', quality: '-', extensions: '' }, // 29
-		{ root: 'Mi', quality: '-', extensions: '7' }, // 30
-		{ root: 'Si', quality: '-', extensions: '7' }, //
-		{ root: 'Mi', quality: '-', extensions: '7' }, // 31
-		{ root: 'Si', quality: '-', extensions: '7' }, //
-		{ root: 'Mi', quality: '-', extensions: '7' }, // 32
-		{ root: 'Fa♯', quality: '-', extensions: '7' }, //
-		{ root: 'Si', quality: '-', extensions: '7' } // 33
+		{ bar: 1, root: 'Si', quality: '-', extensions: '' },
+		{ bar: 2, root: 'Do♯', quality: '-', extensions: '7♭5' },
+		{ root: 'Fa♯', quality: '-', extensions: '7♭9' },
+		{ bar: 3, root: 'Si', quality: '-', extensions: '' },
+		{ bar: 4, root: 'Do♯', quality: '-', extensions: '7♭5' },
+		{ root: 'Fa♯', quality: '-', extensions: '7♭9' },
+		{ bar: 5, root: 'Si', quality: '-', extensions: '' },
+		{ bar: 6, root: 'Mi', quality: '-', extensions: '7' },
+		{ root: 'La', quality: '', extensions: '7' },
+		{ bar: 7, root: 'Re', quality: '', extensions: 'Δ' },
+		{ bar: 8, root: 'Re♯', quality: 'o', extensions: '7' },
+
+		{ bar: 9, root: 'Mi', quality: '-', extensions: '7' },
+		{ bar: 10, root: 'La', quality: '', extensions: '7' },
+		{ bar: 11, root: 'Re', quality: '', extensions: '6' },
+		{ bar: 12, root: 'Sol', quality: '', extensions: 'Δ' },
+		{ bar: 13, root: 'Do♯', quality: '-', extensions: '7♭5' },
+		{ bar: 14, root: 'Fa♯', quality: '-', extensions: '7♭9' },
+		{ bar: 15, root: 'Si', quality: '-', extensions: '' },
+		{ bar: 16, root: 'Do♯', quality: '-', extensions: '7♭5' },
+		{ root: 'Fa♯', quality: '-', extensions: '7♭9' },
+
+		{ bar: 17, root: 'Si', quality: '-', extensions: '' },
+		{ bar: 18, root: 'Do♯', quality: '-', extensions: '7♭5' },
+		{ root: 'Fa♯', quality: '-', extensions: '7♭9' },
+		{ bar: 19, root: 'Si', quality: '-', extensions: '' },
+		{ bar: 20, root: 'Do♯', quality: '-', extensions: '7♭5' },
+		{ root: 'Fa♯', quality: '-', extensions: '7♭9' },
+		{ bar: 21, root: 'Fa♯', quality: '-', extensions: '7♭5' },
+		{ bar: 22, root: 'Si', quality: '', extensions: '7♭9' },
+		{ bar: 23, root: 'Mi', quality: '-', extensions: '' },
+		{ bar: 24, root: 'Mi', quality: '-', extensions: '' },
+
+		{ bar: 25, root: 'Mi', quality: '-', extensions: '' },
+		{ bar: 26, root: 'Do♯', quality: '-', extensions: '7♭5' },
+		{ root: 'Fa♯', quality: '', extensions: '7♭9' },
+		{ bar: 27, root: 'Si', quality: '-', extensions: '' },
+		{ bar: 28, root: 'Sol', quality: '', extensions: 'Δ' },
+		{ bar: 29, root: 'Do♯', quality: '-', extensions: '7♭5' },
+		{ bar: 30, root: 'Fa♯', quality: '', extensions: '7♭9' },
+		{ bar: 31, root: 'Si', quality: '-', extensions: '' },
+		{ bar: 32, root: 'Do♯', quality: '-', extensions: '7♭5' },
+		{ root: 'Fa♯', quality: '', extensions: '7♭9' },
+
+		{ bar: 31, root: 'Si', quality: '-', extensions: '' },
+		{ bar: 32, root: 'Mi', quality: '-', extensions: '7' },
+		{ root: 'Si', quality: '-', extensions: '7' },
+		{ bar: 33, root: 'Mi', quality: '-', extensions: '7' },
+		{ root: 'Si', quality: '-', extensions: '7' },
+		{ bar: 34, root: 'Mi', quality: '-', extensions: '7' },
+		{ root: 'Fa♯', quality: '-', extensions: '7' },
+		{ bar: 35, root: 'Si', quality: '-', extensions: '7' },
+		{ bar: 36, root: 'Si', quality: '-', extensions: '7' }
 	]
 };
