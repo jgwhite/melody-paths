@@ -53,7 +53,7 @@
 		padding: 1rem;
 	}
 	select {
-		margin-bottom: 1rem;
+		display: block;
 	}
 	.progression {
 		display: flex;
