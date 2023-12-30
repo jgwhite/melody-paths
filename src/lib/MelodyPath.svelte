@@ -49,22 +49,25 @@
 		display: inline-flex;
 		flex-direction: column;
 		position: relative;
-		gap: 8px;
+		gap: 1rem;
 		padding: 1rem;
 	}
 	select {
 		display: block;
+		margin: 1rem 0.75rem;
 	}
 	.progression {
 		display: flex;
 	}
 	h1 {
 		font-size: 1.25rem;
+		margin: 0;
 	}
 	h2 {
 		display: flex;
 		font-size: 0.75rem;
 		position: relative;
+		margin: 0;
 		gap: 8px;
 		align-items: center;
 		color: #555;
