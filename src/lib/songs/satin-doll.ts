@@ -21,8 +21,12 @@ export default {
 				{ bar: 7, root: 'Re', quality: '', extensions: 'Δ' },
 				{ root: 'Mi', quality: '-', extensions: '7' },
 				{ bar: 8, root: 'Fa♯', quality: '-', extensions: '7' },
-				{ root: 'Si', quality: '', extensions: '7' },
-
+				{ root: 'Si', quality: '', extensions: '7' }
+			]
+		},
+		{
+			name: 'A',
+			chords: [
 				{ bar: 9, root: 'Mi', quality: '-', extensions: '7' },
 				{ root: 'La', quality: '', extensions: '7' },
 				{ bar: 10, root: 'Mi', quality: '-', extensions: '7' },
@@ -58,7 +62,7 @@ export default {
 			]
 		},
 		{
-			name: 'A Reprise',
+			name: 'A',
 			chords: [
 				{ bar: 25, root: 'Mi', quality: '-', extensions: '7' },
 				{ root: 'La', quality: '', extensions: '7' },
