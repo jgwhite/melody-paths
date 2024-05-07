@@ -1,4 +1,5 @@
 import allOfMe from './all-of-me';
+import allTheThingsYouAre from './all-the-things-you-are';
 import autumnLeaves from './autumn-leaves';
 import blackOrpheus from './black-orpheus';
 import satinDoll from './satin-doll';
@@ -8,6 +9,7 @@ import youDontKnow from './you-dont-know-what-love-is';
 
 export default [
 	allOfMe,
+	allTheThingsYouAre,
 	autumnLeaves,
 	blackOrpheus,
 	satinDoll,

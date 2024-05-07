@@ -84,8 +84,11 @@ export function notesForChord(chord: Chord): string[] {
 	if (chord.extensions.includes('♭5')) {
 		// Flat 5th
 		result.push(transpose(keyNotes[4], -1));
+	} else if (chord.extensions.includes('♯5')) {
+		// Sharp 5th
+		result.push(transpose(keyNotes[4], 1));
 	} else {
-		// Perfect 5th
+		// Regular 5th
 		result.push(keyNotes[4]);
 	}
 
@@ -107,6 +110,9 @@ export function notesForChord(chord: Chord): string[] {
 	if (chord.extensions.includes('♭9')) {
 		// Flat 9th
 		result.push(transpose(keyNotes[1], -1));
+	} else if (chord.extensions.includes('♯9')) {
+		// Sharp 9th
+		result.push(transpose(keyNotes[1], 1));
 	} else if (chord.extensions.includes('9')) {
 		// Regular 9th
 		result.push(keyNotes[1]);
