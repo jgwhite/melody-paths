@@ -4,16 +4,23 @@
 	import Column from './Column.svelte';
 	import Dot from './Dot.svelte';
 
-	export let key = 'Do';
-	export let chord: Chord = {
-		bar: undefined,
-		root: 'Do',
-		quality: '',
-		extensions: ''
-	};
+	type Props = {
+		key?: string;
+		chord?: Chord;
+	}
 
-	let keyNotes = notesForKey(key).reverse();
-	let chordNotes = notesForChord(chord);
+	let {
+		key = 'Do',
+		chord = {
+			bar: undefined,
+			root: 'Do',
+			quality: '',
+			extensions: ''
+		}
+	}: Props = $props();
+
+	let keyNotes = $derived(notesForKey(key).reverse());
+	let chordNotes = $derived(notesForChord(chord));
 
 	function isActive(note: string, n: number): boolean {
 		return chordNotes.includes(note) || chordNotes.includes(outsideNote(note, n));

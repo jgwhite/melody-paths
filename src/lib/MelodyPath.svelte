@@ -4,11 +4,15 @@
 	import Column from './Column.svelte';
 	import Dot from './Dot.svelte';
 	import { notesForKey, ensureOrder } from './note';
-	import songs from './songs';
+	import { default as songs, type Song } from './songs';
 
-	export let song = songs[0];
+	type Props = {
+		song?: Song;
+	}
 
-	$: notes = ensureOrder(notesForKey(song.key)).reverse();
+	let { song = songs[0] }: Props = $props();
+
+	let notes = $derived(ensureOrder(notesForKey(song.key)).reverse());
 
 	function handleSongChange(event: Event) {
 		let target = event.target;
@@ -19,7 +23,7 @@
 	}
 </script>
 
-<select on:change={handleSongChange}>
+<select onchange={handleSongChange}>
 	{#each songs as s (s.id)}
 		<option selected={s === song} value={s.id}>{s.name}</option>
 	{/each}

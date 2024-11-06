@@ -1,13 +1,19 @@
-<script type="ts">
-	import { splitName, notesForKey } from './note';
+<script lang="ts">
+	import { type Chord, splitName } from './note';
 
-	export let chord = {
-		root: 'Do',
-		quality: '',
-		extensions: ''
-	};
+	type Props = {
+		chord: Chord
+	}
 
-	let { base, accidental } = splitName(chord.root);
+	let {
+		chord = {
+			root: 'Do',
+			quality: '',
+			extensions: ''
+		}
+	}: Props = $props();
+
+	let { base, accidental } = $derived(splitName(chord.root));
 </script>
 
 <div class="chord-name">
