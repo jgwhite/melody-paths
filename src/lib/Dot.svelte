@@ -4,14 +4,9 @@
 		title?: string;
 		color?: string | undefined;
 		children?: import('svelte').Snippet;
-	}
+	};
 
-	let {
-		isActive = false,
-		title = '',
-		color = undefined,
-		children
-	}: Props = $props();
+	let { isActive = false, title = '', color = undefined, children }: Props = $props();
 </script>
 
 <div class="dot" class:active={isActive} style:background-color={color} {title}>

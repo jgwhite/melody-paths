@@ -8,7 +8,7 @@
 
 	type Props = {
 		song?: Song;
-	}
+	};
 
 	let { song = songs[0] }: Props = $props();
 

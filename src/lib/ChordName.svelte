@@ -2,8 +2,8 @@
 	import { type Chord, splitName } from './note';
 
 	type Props = {
-		chord: Chord
-	}
+		chord: Chord;
+	};
 
 	let {
 		chord = {

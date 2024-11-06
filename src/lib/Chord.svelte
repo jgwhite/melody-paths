@@ -7,7 +7,7 @@
 	type Props = {
 		key?: string;
 		chord?: Chord;
-	}
+	};
 
 	let {
 		key = 'Do',
