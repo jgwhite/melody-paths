@@ -3,7 +3,7 @@
 	import Chord from './Chord.svelte';
 	import Column from './Column.svelte';
 	import Dot from './Dot.svelte';
-	import { notesForKey, ensureOrder } from './note';
+	import { notesForKey, ensureOrder, type Chord as ChordType } from './note';
 	import { default as songs, type Song } from './songs';
 
 	type Props = {
@@ -21,6 +21,17 @@
 			goto(`/${target.value}`);
 		}
 	}
+
+	function chunk(chords: ChordType[]): ChordType[][] {
+		const result: ChordType[][] = [];
+		for (const chord of chords) {
+			if (Number(chord.bar) % 4 === 1) {
+				result.push([]);
+			}
+			result.at(-1)?.push(chord);
+		}
+		return result;
+	}
 </script>
 
 <select onchange={handleSongChange}>
@@ -32,19 +43,21 @@
 <div class="container">
 	<h1>{song.name}</h1>
 
-	{#each song.sections as section (section)}
+	{#each song.sections as section}
 		<h2>{section.name}</h2>
-		<div class="progression">
-			<Column>
-				{#each notes as note}
-					<Dot>{note}</Dot>
-				{/each}
-			</Column>
+		{#each chunk(section.chords) as chords}
+			<div class="progression">
+				<Column>
+					{#each notes as note}
+						<Dot>{note}</Dot>
+					{/each}
+				</Column>
 
-			{#each section.chords as chord (chord)}
-				<Chord key={song.key} {chord} />
-			{/each}
-		</div>
+				{#each chords as chord}
+					<Chord key={song.key} {chord} />
+				{/each}
+			</div>
+		{/each}
 	{/each}
 </div>
 
