@@ -14,8 +14,8 @@ export default {
 				{ bar: 6, root: 'La', quality: '', extensions: '7' },
 				{ bar: 7, root: 'Re', quality: '', extensions: '6' },
 				{ bar: 8, root: 'Mi', quality: '-', extensions: '7' },
-				{ root: 'La', quality: '', extensions: '7' }
-			]
+				{ root: 'La', quality: '', extensions: '7' },
+			],
 		},
 		{
 			name: 'A',
@@ -28,8 +28,8 @@ export default {
 				{ bar: 14, root: 'La', quality: '', extensions: '7' },
 				{ bar: 15, root: 'Re', quality: '', extensions: '6' },
 				{ bar: 16, root: 'La', quality: '-', extensions: '7' },
-				{ root: 'Re', quality: '', extensions: '7' }
-			]
+				{ root: 'Re', quality: '', extensions: '7' },
+			],
 		},
 		{
 			name: 'B',
@@ -42,8 +42,8 @@ export default {
 				{ bar: 22, root: 'Mi', quality: '', extensions: '7' },
 				{ bar: 23, root: 'Mi', quality: '-', extensions: '7' },
 				{ bar: 24, root: 'La', quality: '', extensions: '7' },
-				{ root: 'La', quality: '', extensions: '7♭9' }
-			]
+				{ root: 'La', quality: '', extensions: '7♭9' },
+			],
 		},
 		{
 			name: 'A',
@@ -55,8 +55,8 @@ export default {
 				{ bar: 29, root: 'Mi', quality: '-', extensions: '7' },
 				{ bar: 30, root: 'La', quality: '', extensions: '7' },
 				{ bar: 31, root: 'Re', quality: '', extensions: '6' },
-				{ bar: 32, root: 'Re', quality: '', extensions: '6' }
-			]
-		}
-	]
+				{ bar: 32, root: 'Re', quality: '', extensions: '6' },
+			],
+		},
+	],
 };

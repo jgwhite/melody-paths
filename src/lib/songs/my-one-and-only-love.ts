@@ -10,8 +10,8 @@ export default {
 				{ root: 'Si', quality: '-', extensions: '7' },
 				{ bar: 2, root: 'Mi', quality: '-', extensions: '7' },
 				{ root: 'La', quality: '', extensions: '7' },
-				{ root: 'Si♭', quality: 'o', extensions: '7' }
-			]
-		}
-	]
+				{ root: 'Si♭', quality: 'o', extensions: '7' },
+			],
+		},
+	],
 };

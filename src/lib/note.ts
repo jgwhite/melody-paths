@@ -24,7 +24,7 @@ export function notesForKey(key: string): string[] {
 		transpose(key, 5),
 		transpose(key, 7),
 		transpose(key, 9),
-		transpose(key, 11)
+		transpose(key, 11),
 	];
 }
 

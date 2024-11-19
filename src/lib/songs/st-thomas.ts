@@ -31,8 +31,8 @@ export default {
 				{ bar: 14, root: 'Sol', quality: '', extensions: 'Δ' },
 				{ root: 'Sol♯', quality: 'o', extensions: '7' },
 				{ bar: 15, root: 'La', quality: '', extensions: '7' },
-				{ bar: 16, root: 'Re', quality: '', extensions: '6' }
-			]
-		}
-	]
+				{ bar: 16, root: 'Re', quality: '', extensions: '6' },
+			],
+		},
+	],
 };

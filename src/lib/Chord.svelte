@@ -15,8 +15,8 @@
 			bar: undefined,
 			root: 'Do',
 			quality: '',
-			extensions: ''
-		}
+			extensions: '',
+		},
 	}: Props = $props();
 
 	let keyNotes = $derived(notesForKey(key).reverse());

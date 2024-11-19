@@ -9,8 +9,8 @@
 		chord = {
 			root: 'Do',
 			quality: '',
-			extensions: ''
-		}
+			extensions: '',
+		},
 	}: Props = $props();
 
 	let { base, accidental } = $derived(splitName(chord.root));

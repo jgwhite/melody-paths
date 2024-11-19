@@ -22,8 +22,8 @@ export default {
 				{ bar: 13, root: 'Sol♯', quality: '-', extensions: '7♭5' },
 				{ bar: 14, root: 'Do♯', quality: '', extensions: '7' },
 				{ bar: 15, root: 'Fa♯', quality: '-', extensions: '' },
-				{ bar: 16, root: 'Fa♯', quality: '-', extensions: '' }
-			]
+				{ bar: 16, root: 'Fa♯', quality: '-', extensions: '' },
+			],
 		},
 		{
 			name: 'B',
@@ -46,8 +46,8 @@ export default {
 				{ bar: 29, root: 'Sol♯', quality: '-', extensions: '7♭5' },
 				{ bar: 30, root: 'Do♯', quality: '', extensions: '7♭9' },
 				{ bar: 31, root: 'Fa♯', quality: '-', extensions: '' },
-				{ bar: 32, root: 'Fa♯', quality: '-', extensions: '' }
-			]
-		}
-	]
+				{ bar: 32, root: 'Fa♯', quality: '-', extensions: '' },
+			],
+		},
+	],
 };

@@ -20,8 +20,8 @@ export default {
 				{ root: 'Si♭', quality: '', extensions: '7' },
 				{ bar: 7, root: 'Mi♭', quality: '', extensions: '7' },
 				{ bar: 8, root: 'La', quality: '-', extensions: '7♭5' },
-				{ root: 'Re', quality: '', extensions: '7♭9' }
-			]
+				{ root: 'Re', quality: '', extensions: '7♭9' },
+			],
 		},
 		{
 			name: 'A',
@@ -40,8 +40,8 @@ export default {
 				{ root: 'Si♭', quality: '', extensions: '7' },
 				{ bar: 15, root: 'Mi♭', quality: '', extensions: '7' },
 				{ root: 'Re', quality: '', extensions: '7♭9' },
-				{ bar: 16, root: 'Sol', quality: '-', extensions: '6' }
-			]
+				{ bar: 16, root: 'Sol', quality: '-', extensions: '6' },
+			],
 		},
 		{
 			name: 'B',
@@ -57,8 +57,8 @@ export default {
 				{ root: 'La', quality: '', extensions: '7' },
 				{ bar: 22, root: 'Re', quality: '', extensions: 'Δ' },
 				{ bar: 23, root: 'Mi♭', quality: '', extensions: '9(♯11)' },
-				{ bar: 24, root: 'Re', quality: '', extensions: '7♭9' }
-			]
+				{ bar: 24, root: 'Re', quality: '', extensions: '7♭9' },
+			],
 		},
 		{
 			name: 'A',
@@ -77,8 +77,8 @@ export default {
 				{ root: 'Si♭', quality: '', extensions: '7' },
 				{ bar: 31, root: 'Mi♭', quality: '', extensions: '7' },
 				{ root: 'Re', quality: '', extensions: '7♭9' },
-				{ bar: 32, root: 'Sol', quality: '-', extensions: '6' }
-			]
-		}
-	]
+				{ bar: 32, root: 'Sol', quality: '-', extensions: '6' },
+			],
+		},
+	],
 };
