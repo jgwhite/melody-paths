@@ -55,10 +55,12 @@ export function notesForChord(chord: Chord): string[] {
 	// 1st
 	result.push(keyNotes[0]);
 
-	if (chord.quality === 'ø' && chord.extensions === '7') {
-		// Special treatment for half-diminished seventh (ø7)
+	if (chord.quality === 'ø' || chord.quality === 'o') {
 		result.push(transpose(keyNotes[2], -1));
 		result.push(transpose(keyNotes[4], -1));
+	}
+	if (chord.quality === 'ø' && chord.extensions === '7') {
+		// Special treatment for half-diminished seventh (ø7)
 		result.push(transpose(keyNotes[6], -1));
 
 		return result;
@@ -66,8 +68,6 @@ export function notesForChord(chord: Chord): string[] {
 
 	if (chord.quality === 'o' && chord.extensions === '7') {
 		// Special treatment for diminished seventh (o7)
-		result.push(transpose(keyNotes[2], -1));
-		result.push(transpose(keyNotes[4], -1));
 		result.push(transpose(keyNotes[6], -2));
 
 		return result;
