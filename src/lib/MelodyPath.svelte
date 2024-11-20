@@ -21,17 +21,6 @@
 			goto(`/${target.value}`);
 		}
 	}
-
-	function chunk(chords: ChordType[]): ChordType[][] {
-		const result: ChordType[][] = [];
-		for (const chord of chords) {
-			if (Number(chord.bar) % 4 === 1) {
-				result.push([]);
-			}
-			result.at(-1)?.push(chord);
-		}
-		return result;
-	}
 </script>
 
 <select onchange={handleSongChange}>
@@ -45,19 +34,17 @@
 
 	{#each song.sections as section}
 		<h2>{section.name}</h2>
-		{#each chunk(section.chords) as chords}
-			<div class="progression">
-				<Column>
-					{#each notes as note}
-						<Dot>{note}</Dot>
-					{/each}
-				</Column>
-
-				{#each chords as chord}
-					<Chord key={song.key} {chord} />
+		<div class="progression">
+			<Column>
+				{#each notes as note}
+					<Dot>{note}</Dot>
 				{/each}
-			</div>
-		{/each}
+			</Column>
+
+			{#each section.chords as chord}
+				<Chord key={song.key} {chord} />
+			{/each}
+		</div>
 	{/each}
 </div>
 
