@@ -122,6 +122,10 @@ export function notesForChord(chord: Chord): string[] {
 		result.push(transpose(keyNotes[3], 1));
 	}
 
+	if (chord.extensions.includes('♭13')) {
+		result.push(transpose(keyNotes[5], -1));
+	}
+
 	return result;
 }
 

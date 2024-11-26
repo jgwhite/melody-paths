@@ -4,6 +4,7 @@ import autumnLeaves from './autumn-leaves';
 import blackOrpheus from './black-orpheus';
 import myOneAndOnlyLove from './my-one-and-only-love';
 import satinDoll from './satin-doll';
+import stellaByStarlight from './stella-by-starlight';
 import stThomas from './st-thomas';
 import takeTheATrain from './take-the-a-train';
 import youDontKnow from './you-dont-know-what-love-is';
@@ -28,6 +29,7 @@ export default [
 	blackOrpheus,
 	myOneAndOnlyLove,
 	satinDoll,
+	stellaByStarlight,
 	stThomas,
 	takeTheATrain,
 	youDontKnow,
