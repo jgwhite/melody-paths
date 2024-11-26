@@ -56,6 +56,11 @@
 		gap: 1rem;
 		padding: 1rem;
 	}
+	@media print {
+		.container {
+			display: block;
+		}
+	}
 	select {
 		display: block;
 		margin: 1rem 0.75rem;
@@ -63,9 +68,21 @@
 	.progression {
 		display: flex;
 	}
+	@media print {
+		.progression {
+			margin-top: 1rem;
+			margin-bottom: 3rem;
+			page-break-after: always;
+		}
+	}
 	h1 {
 		font-size: 1.25rem;
 		margin: 0;
+	}
+	@media print {
+		h1 {
+			margin-bottom: 2rem;
+		}
 	}
 	h2 {
 		display: flex;

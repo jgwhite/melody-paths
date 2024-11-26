@@ -24,6 +24,12 @@
 		width: 1rem;
 		height: 1rem;
 	}
+	@media print {
+		.dot {
+			width: 12px;
+			height: 12px;
+		}
+	}
 	.dot.active {
 		border-color: black;
 	}

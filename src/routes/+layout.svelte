@@ -15,4 +15,9 @@
 			-apple-system,
 			sans-serif;
 	}
+	@media print {
+		:global(body) {
+			font-size: 14px;
+		}
+	}
 </style>

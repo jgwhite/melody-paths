@@ -35,10 +35,21 @@
 		grid-area: a;
 		font-size: 1.25rem;
 	}
+	@media print {
+		.a {
+			font-size: 1rem;
+		}
+	}
 	.b {
 		grid-area: b;
 	}
 	.c {
 		grid-area: c;
+	}
+	@media print {
+		.b,
+		.c {
+			font-size: 0.8rem;
+		}
 	}
 </style>

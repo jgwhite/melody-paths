@@ -21,4 +21,9 @@
 		border-right: 1px solid #eee;
 		min-width: 5rem;
 	}
+	@media print {
+		.column {
+			min-width: 3rem;
+		}
+	}
 </style>
