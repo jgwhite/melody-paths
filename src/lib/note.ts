@@ -102,7 +102,7 @@ export function notesForChord(chord: Chord): string[] {
 		result.push(transpose(keyNotes[6], -1));
 	}
 
-	if (chord.extensions === 'Δ') {
+	if (chord.extensions.includes('Δ')) {
 		// Major 7th
 		result.push(keyNotes[6]);
 	}
