@@ -14,11 +14,6 @@ export default {
 				{ root: 'Sol', quality: '-', extensions: '' },
 				{ bar: 4, root: 'Do', quality: '-', extensions: '7' },
 				{ root: 'Fa', quality: '', extensions: '7' },
-			],
-		},
-		{
-			name: 'A',
-			chords: [
 				{ bar: 5, root: 'Re', quality: '-', extensions: '7' },
 				{ root: 'Sol', quality: '-', extensions: '7' },
 				{ bar: 6, root: 'Do', quality: '-', extensions: '7' },
@@ -40,11 +35,6 @@ export default {
 				{ root: 'Fa', quality: '', extensions: '7♭9' },
 				{ bar: 4, root: 'Si♭', quality: '', extensions: 'Δ' },
 				{ root: 'Si♭', quality: '', extensions: 'Δ' },
-			],
-		},
-		{
-			name: 'B',
-			chords: [
 				{ bar: 5, root: 'Re', quality: 'ø', extensions: '7' },
 				{ root: 'Sol', quality: '', extensions: '7♭9' },
 				{ bar: 6, root: 'Do', quality: '-', extensions: '7' },
