@@ -1,3 +1,4 @@
+import aguaDeBeber from './agua-de-beber';
 import allOfMe from './all-of-me';
 import allTheThingsYouAre from './all-the-things-you-are';
 import autumnLeaves from './autumn-leaves';
@@ -24,6 +25,7 @@ export type SongSection = {
 };
 
 export default [
+	aguaDeBeber,
 	allOfMe,
 	allTheThingsYouAre,
 	autumnLeaves,

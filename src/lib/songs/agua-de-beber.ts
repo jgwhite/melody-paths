@@ -1,0 +1,63 @@
+export default {
+	id: 'agua-de-beber',
+	name: 'Agua de Beber',
+	key: 'Re',
+	sections: [
+		{
+			name: 'INTRO',
+			chords: [
+				{ bar: 1, root: 'Si', quality: '-', extensions: '7' },
+				{ bar: 2, root: 'Do♯', quality: '', extensions: '7♯9' },
+				{ root: 'Fa♯', quality: '', extensions: '7♭13' },
+				{ bar: 3, root: 'Si', quality: '-', extensions: '7' },
+				{ bar: 4, root: 'Do♯', quality: '', extensions: '7♯9' },
+				{ root: 'Fa♯', quality: '', extensions: '7♭13' },
+				{ bar: 5, root: 'Si', quality: '-', extensions: '7' },
+				{ bar: 6, root: 'Sol', quality: '', extensions: 'Δ' },
+				{ bar: 7, root: 'Si', quality: '-', extensions: '7' },
+				{ bar: 8, root: 'Si', quality: '-', extensions: '7' },
+			],
+		},
+		{
+			name: 'A',
+			chords: [
+				{ bar: 1, root: 'Do♯', quality: '', extensions: '7♭9' },
+				{ bar: 2, root: 'Fa♯', quality: '', extensions: '7♯5' },
+				{ bar: 3, root: 'Si', quality: '-', extensions: '7' },
+				{ bar: 4, root: 'Mi', quality: '', extensions: '7' },
+				{ bar: 5, root: 'Mi', quality: '-', extensions: '7' },
+				{ bar: 6, root: 'La', quality: '', extensions: '7' },
+				{ bar: 7, root: 'Re', quality: '', extensions: 'Δ' },
+				{ bar: 8, root: 'Re', quality: '', extensions: 'Δ' },
+			],
+		},
+		{
+			name: 'B',
+			chords: [
+				{ bar: 1, root: 'Mi', quality: '', extensions: '7' },
+				{ bar: 2, root: 'Mi', quality: '-', extensions: '7' },
+				{ bar: 3, root: 'Si', quality: '-', extensions: '7' },
+				{ bar: 4, root: 'Si', quality: '', extensions: '7♭9' },
+				{ bar: 5, root: 'Mi', quality: '', extensions: '7' },
+				{ bar: 6, root: 'Mi', quality: '-', extensions: '7' },
+				{ bar: 7, root: 'Si', quality: '-', extensions: '7' },
+				{ bar: 8, root: 'Fa♯', quality: '', extensions: '7♭13' },
+			],
+		},
+		{
+			name: 'C',
+			chords: [
+				{ bar: 1, root: 'Si', quality: '-', extensions: '7' },
+				{ bar: 2, root: 'Do♯', quality: '', extensions: '7♯9' },
+				{ root: 'Fa♯', quality: '', extensions: '7♭13' },
+				{ bar: 3, root: 'Si', quality: '-', extensions: '7' },
+				{ bar: 4, root: 'Do♯', quality: '', extensions: '7♯9' },
+				{ root: 'Fa♯', quality: '', extensions: '7♭13' },
+				{ bar: 5, root: 'Si', quality: '-', extensions: '7' },
+				{ bar: 6, root: 'Sol', quality: '', extensions: 'Δ' },
+				{ bar: 7, root: 'Si', quality: '-', extensions: '7' },
+				{ bar: 8, root: 'Si', quality: '-', extensions: '7' },
+			],
+		},
+	],
+};
