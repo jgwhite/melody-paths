@@ -88,7 +88,7 @@ export default {
 			],
 		},
 		{
-			name: 'C',
+			name: 'OUTRO',
 			chords: [
 				{ bar: 33, root: 'Si', quality: '-', extensions: '' },
 				{ root: 'Si', quality: '-', extensions: '' },
