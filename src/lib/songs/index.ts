@@ -10,6 +10,7 @@ import stellaByStarlight from './stella-by-starlight';
 import stThomas from './st-thomas';
 import takeTheATrain from './take-the-a-train';
 import youDontKnow from './you-dont-know-what-love-is';
+import theGirlFromIpanema from './the-girl-from-ipanema';
 import { type Chord } from '../note';
 
 export type Song = {
@@ -37,4 +38,5 @@ export default [
 	stThomas,
 	takeTheATrain,
 	youDontKnow,
+	theGirlFromIpanema,
 ];
