@@ -1,5 +1,4 @@
 import { type Song } from '.';
-import { type Chord } from '../note';
 
 const theGirlFromIpanema: Song = {
 	id: 'the-girl-from-ipanema',
