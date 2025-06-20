@@ -9,6 +9,12 @@
 		chord?: Chord;
 	};
 
+	type Adapted = {
+		note: string;
+		trueNote: string;
+		nudge?: '♯' | '♭';
+	};
+
 	let {
 		key = 'Do',
 		chord = {
@@ -21,80 +27,73 @@
 
 	let keyNotes = $derived(notesForKey(key).reverse());
 	let chordNotes = $derived(notesForChord(chord));
+	let adapted: Adapted[] = $derived.by(() => {
+		let seen = new Set();
+		let result: Adapted[] = [];
 
-	function isActive(note: string, n: number): boolean {
-		return chordNotes.includes(note) || chordNotes.includes(outsideNote(note, n));
+		for (let note of chordNotes) {
+			if (keyNotes.includes(note) && !seen.has(note)) {
+				result.push({ note, trueNote: note });
+				seen.add(note);
+				continue;
+			}
+
+			let flat = transpose(note, -1);
+			if (keyNotes.includes(flat) && !seen.has(flat)) {
+				result.push({ note: flat, trueNote: note, nudge: '♯' });
+				seen.add(flat);
+				continue;
+			}
+
+			let sharp = transpose(note, 1);
+			if (keyNotes.includes(sharp) && !seen.has(sharp)) {
+				result.push({ note: sharp, trueNote: note, nudge: '♭' });
+				seen.add(sharp);
+				continue;
+			}
+		}
+
+		return result;
+	});
+
+	function isActive(note: string): boolean {
+		return adapted.some((a) => a.note === note);
 	}
 
 	function numberFor(note: string, n: number): string {
-		if (chordNotes.includes(note)) {
-			return `${n}`;
-		}
+		const a = adapted.find((a) => a.note === note);
+		const nudge = a?.nudge ?? '';
 
-		note = outsideNote(note, n);
-
-		if (chordNotes.includes(note)) {
-			return `♯${n}`;
-		}
-
-		return `${n}`;
+		return `${nudge}${7 - n}`;
 	}
 
-	function titleFor(note: string, n: number) {
-		if (chordNotes.includes(note)) {
-			return note;
+	function titleFor(note: string): string {
+		const a = adapted.find((a) => a.note === note);
+
+		if (!a) {
+			return '';
 		}
 
-		note = outsideNote(note, 1);
-
-		if (chordNotes.includes(note)) {
-			return note;
-		}
-
-		return note;
+		return a.trueNote;
 	}
 
-	function outsideNote(note: string, n: number): string {
-		if (n === 3) {
-			return note;
-		}
-		if (n === 7) {
-			return note;
-		}
-		return transpose(note, 1);
-	}
+	function colorFor(note: string): string | undefined {
+		const index = adapted.findIndex((a) => a.note === note);
 
-	function colorFor(note: string, n: number): string | undefined {
-		if (note === chordNotes[0] || outsideNote(note, n) == chordNotes[0]) {
-			return '#f59e0b';
-		}
-
-		if (note === chordNotes[1] || outsideNote(note, n) === chordNotes[1]) {
-			return '#fbbf24';
-		}
-
-		if (note === chordNotes[2] || outsideNote(note, n) === chordNotes[2]) {
-			return '#fde68a';
-		}
-
-		if (note === chordNotes[3] || outsideNote(note, n) === chordNotes[3]) {
-			return '#fffbeb';
-		}
-
-		if (note === chordNotes[4] || outsideNote(note, n) === chordNotes[4]) {
-			return '#ede9fe';
-		}
+		return {
+			0: 'var(--root)',
+			1: 'var(--second)',
+			2: 'var(--third)',
+			3: 'var(--fourth)',
+			4: 'var(--fifth)',
+		}[index];
 	}
 </script>
 
 <Column>
 	{#each keyNotes as note, index}
-		<Dot
-			isActive={isActive(note, 7 - index)}
-			title={titleFor(note, 7 - index)}
-			color={colorFor(note, 7 - index)}
-		>
-			{numberFor(note, 7 - index)}
+		<Dot isActive={isActive(note)} title={titleFor(note)} color={colorFor(note)}>
+			{numberFor(note, index)}
 		</Dot>
 	{/each}
 	<div class="box">

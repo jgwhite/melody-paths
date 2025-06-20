@@ -15,6 +15,12 @@
 
 <style>
 	.dot {
+		--root: #f59e0b;
+		--second: #fbbf24;
+		--third: #fde68a;
+		--fourth: #fffbeb;
+		--fifth: #ede9fe;
+
 		display: flex;
 		padding: 1rem;
 		justify-content: center;
