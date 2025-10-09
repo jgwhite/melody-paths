@@ -3,7 +3,7 @@
 	import Chord from './Chord.svelte';
 	import Column from './Column.svelte';
 	import Dot from './Dot.svelte';
-	import { notesForKey, ensureOrder, type Chord as ChordType } from './note';
+	import { notesForKey, ensureOrder } from './note';
 	import { default as songs, type Song } from './songs';
 
 	type Props = {
