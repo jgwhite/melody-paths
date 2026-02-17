@@ -1,6 +1,7 @@
 import aguaDeBeber from './agua-de-beber';
 import allOfMe from './all-of-me';
 import allTheThingsYouAre from './all-the-things-you-are';
+import anthropology from './anthropology';
 import autumnLeaves from './autumn-leaves';
 import blackOrpheus from './black-orpheus';
 import theGirlFromIpanema from './the-girl-from-ipanema';
@@ -29,6 +30,7 @@ export default [
 	aguaDeBeber,
 	allOfMe,
 	allTheThingsYouAre,
+	anthropology,
 	autumnLeaves,
 	blackOrpheus,
 	theGirlFromIpanema,
